@@ -11,7 +11,7 @@ public class UserServiceApplication {
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceApplication.class);
 
 	public static void main(String[] args) {
-		LOGGER.trace("Trace Log");
+
 		LOGGER.debug("Debug Log");
 		LOGGER.info("Info Log");
 		LOGGER.warn("Warn Log");
