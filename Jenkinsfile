@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('git repo & clean') {
             steps {
-                //bat "rmdir  /s /q ma-user-service"
+                bat "rmdir  /s /q ma-user-service"
                 bat "git clone https://github.com/obify/ma-user-service.git"
             }
         }
         stage('test') {
             steps {
-                bat "mvn test -f spring-data-jpa-crud"
+                bat "mvn test -f ma-user-service"
             }
         }
         stage('SonarQube Analysis') {
@@ -31,7 +31,7 @@ pipeline {
         }
         stage('package') {
             steps {
-                bat "mvn package -f spring-data-jpa-crud"
+                bat "mvn package -f ma-user-service"
             }
         }
     }
